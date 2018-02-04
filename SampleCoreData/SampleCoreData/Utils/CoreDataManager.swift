@@ -42,7 +42,6 @@ class CoreDataManager: NSObject
     }()
     
     // MARK: - Core Data Saving support
-    
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -89,10 +88,33 @@ class CoreDataManager: NSObject
         }
     }
     
+    func loadAll(entityName: String) -> [NSManagedObject]
+    {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        
+        do {
+            let result = try persistentContainer.viewContext.fetch(fetchRequest)
+            if result.count == 0 || !(result[0] is NSManagedObject)
+            {
+                return []
+            }
+            
+            return result as! [NSManagedObject]
+        } catch let error as NSError
+        {
+            print("error on fetch \(error)")
+            return []
+        }
+    }
+    
     // MARK: - Core Data Loading support
     func delete(entityName: String, by: Dictionary<String, String>)
     {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        if let object = load(entityName: entityName, by: by)
+        {
+            persistentContainer.viewContext.delete(object)
+            saveContext()
+        }
     }
     
     private func dictToPredicate(dict: Dictionary<String, String>) -> NSPredicate
