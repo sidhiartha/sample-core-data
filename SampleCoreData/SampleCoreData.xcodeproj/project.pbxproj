@@ -17,6 +17,7 @@
 		C7D909732026195F00BA5067 /* SampleCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D909722026195F00BA5067 /* SampleCoreDataTests.swift */; };
 		C7D9097E2026195F00BA5067 /* SampleCoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D9097D2026195F00BA5067 /* SampleCoreDataUITests.swift */; };
 		C7D9098D202619B900BA5067 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D9098C202619B900BA5067 /* CoreDataManager.swift */; };
+		C7F96838202D069900EEA209 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F96837202D069900EEA209 /* DetailViewController.swift */; };
 		C7FDA1F9202A81B000CEC916 /* AddressBookEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDA1F7202A81B000CEC916 /* AddressBookEntity+CoreDataClass.swift */; };
 		C7FDA1FA202A81B000CEC916 /* AddressBookEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDA1F8202A81B000CEC916 /* AddressBookEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		C7D9097D2026195F00BA5067 /* SampleCoreDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCoreDataUITests.swift; sourceTree = "<group>"; };
 		C7D9097F2026195F00BA5067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7D9098C202619B900BA5067 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		C7F96837202D069900EEA209 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C7FDA1F7202A81B000CEC916 /* AddressBookEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AddressBookEntity+CoreDataClass.swift"; path = "SampleCoreData/Entities/AddressBookEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C7FDA1F8202A81B000CEC916 /* AddressBookEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AddressBookEntity+CoreDataProperties.swift"; path = "SampleCoreData/Entities/AddressBookEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 			children = (
 				C7D9095C2026195F00BA5067 /* ViewController.swift */,
 				C7B3347B20285EE20042E61D /* CreateViewController.swift */,
+				C7F96837202D069900EEA209 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				C7D9095D2026195F00BA5067 /* ViewController.swift in Sources */,
 				C7D9098D202619B900BA5067 /* CoreDataManager.swift in Sources */,
 				C7D9095B2026195F00BA5067 /* AppDelegate.swift in Sources */,
+				C7F96838202D069900EEA209 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

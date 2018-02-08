@@ -33,6 +33,14 @@ class ViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail"
+        {
+            let controller = segue.destination as? DetailViewController
+            controller?.record = sender as? AddressBookEntity
+        }
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -52,7 +60,7 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ShowDetail", sender: nil)
+        performSegue(withIdentifier: "ShowDetail", sender: records[indexPath.row])
     }
 }
 

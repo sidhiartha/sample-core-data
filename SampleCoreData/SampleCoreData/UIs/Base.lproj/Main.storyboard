@@ -125,7 +125,7 @@
         <!--Name-->
         <scene sceneID="5Sq-qC-0WO">
             <objects>
-                <viewController title="Name" id="yWH-qR-hUf" sceneMemberID="viewController">
+                <viewController title="Name" id="yWH-qR-hUf" customClass="DetailViewController" customModule="SampleCoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aXf-aG-n9C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,6 +154,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H4X-xa-fAM"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="VTm-FD-1Xt" id="cyl-dq-fGo"/>
+                        <outlet property="phoneLabel" destination="pen-eQ-pXR" id="pe0-2M-xYb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0xZ-bx-Ufl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
