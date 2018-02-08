@@ -10,9 +10,22 @@ import UIKit
 
 class ViewController: UITableViewController {
 
+    var records = [AddressBookEntity]()
+    {
+        didSet
+        {
+            tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        records = CoreDataManager.shared.loadAll(entityName: "AddressBookEntity") as! [AddressBookEntity]
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,11 +38,15 @@ class ViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return records.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath)
+        
+        let record = records[indexPath.row]
+        cell.textLabel?.text = record.name ?? record.phone
+        cell.detailTextLabel?.text = record.phone
         
         return cell
     }

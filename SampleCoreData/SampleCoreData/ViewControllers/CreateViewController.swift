@@ -50,5 +50,7 @@ class CreateViewController: UIViewController {
         nameField.text = ""
         phoneField.text = ""
         descField.text = ""
+        
+        navigationController?.popViewController(animated: true)
     }
 }
