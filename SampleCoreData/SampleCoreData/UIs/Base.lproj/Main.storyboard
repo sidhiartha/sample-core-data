@@ -13,7 +13,7 @@
         <!--Add Contact-->
         <scene sceneID="Aid-rV-7RU">
             <objects>
-                <viewController title="Add Contact" id="4ww-RB-6Ew" sceneMemberID="viewController">
+                <viewController title="Add Contact" id="4ww-RB-6Ew" customClass="CreateViewController" customModule="SampleCoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f3J-wt-NAL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,8 +52,17 @@
                         <viewLayoutGuide key="safeArea" id="WiF-aB-K5o"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Contact" id="4JX-nd-pbU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Xpa-mx-mcj"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Xpa-mx-mcj">
+                            <connections>
+                                <action selector="save:" destination="4ww-RB-6Ew" id="Uuj-66-tDy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descField" destination="oTV-l6-qfa" id="VTb-kn-CUM"/>
+                        <outlet property="nameField" destination="l61-dr-Byc" id="FgP-Km-9Xx"/>
+                        <outlet property="phoneField" destination="exB-X4-gkG" id="PIR-dY-Pr7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u2k-MU-qwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
